@@ -17,7 +17,10 @@ The initial target list contains:
 
 Add a repository secret named `FORK_SYNC_TOKEN`.
 
-A classic personal access token with `repo` scope works well. If you use a fine-grained token, it needs write access to each fork repository you want to sync.
+A classic personal access token needs `repo` scope. It also needs `workflow`
+scope when an upstream update can create or modify files in `.github/workflows`.
+If you use a fine-grained token, it needs write access to each fork repository
+you want to sync and write access to workflows.
 
 ## Targets
 
